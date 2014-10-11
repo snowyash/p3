@@ -1,0 +1,15 @@
+.checkbox, h2, button{
+  margin-bottom: 30px;
+}
+
+.other-color{
+  background-color: #865f86;
+}
+
+.navbar-inverse .navbar-brand{
+  color: #F6CEE3;
+}
+
+#password{
+  color: #5cb85c;
+}
