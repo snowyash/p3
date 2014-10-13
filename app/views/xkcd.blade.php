@@ -39,17 +39,17 @@
           <label class="col-lg-2">
             <input type="checkbox" id="includeDigit" name="includeDigit">Include Digits (0-9)
           </label>
-          <label class="col-lg-2">
-            <input type="checkbox" id="capitalization" name="capitalization">Capitalize 1st Letters
-          </label>
-          <label class="col-lg-2">
-            <input type="checkbox" id="upperCase" name="upperCase">All Upper Case
-          </label>
-          <label class="col-lg-2">
-            <input type="checkbox" id="lowerCase" name="lowerCase">All Lower Case
-          </label>
           <label class="col-lg-4">
             <input type="checkbox" id="includeSymbol" name="includeSymbol">Include Symbols (&#36;&#45;&#64;&#95;&#38;)
+          </label>
+          <label class="col-lg-2">
+            <input type="radio" id="capitalization" name="capitalization"> Capitalize 1st Letters
+          </label>
+          <label class="col-lg-2">
+            <input type="radio" id="upperCase" name="upperCase"> All Upper Case
+          </label>
+          <label class="col-lg-2">
+            <input type="radio" id="lowerCase" name="lowerCase"> All Lower Case
           </label>
         </div>
 

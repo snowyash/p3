@@ -15,3 +15,13 @@ Route::get('/xkcd', function()
 {
 	return View::make('xkcd');
 });
+
+Route::get('/lorem_ipsum', function()
+{
+	return View::make('lorem_ipsum');
+});
+
+Route::get('/fake_user', function()
+{
+	return View::make('fake_user');
+});
