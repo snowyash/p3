@@ -22,7 +22,7 @@
           ) ) }}
       
       <div class="col-lg-10 col-lg-offset-1">
-          <h3 class="text-justify" id="lorem_ipsum"></h3>          
+        <h3 class="text-justify"  id="lorem_ipsum"></h3>
       </div>
 
       <div class="form-group col-lg-12">

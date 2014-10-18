@@ -71,8 +71,9 @@ jQuery( document ).ready( function( $ ) {
                 "parCount": $( '#parCount' ).val()
             },
             function( data ) {
-                var obj = JSON.parse(data);
-                $("#lorem_ipsum").text(obj.msg);
+                var result = data.msg;
+
+                $("#lorem_ipsum").html(result);
             },
             'json'
         );

@@ -23,7 +23,7 @@
 
             $generator = new Badcow\LoremIpsum\Generator();
             $paragraphs = $generator->getParagraphs($parCount);
-            $result = implode('<p>', $paragraphs);
+            $result = implode('<p><p>', $paragraphs);
      
             return Response::json(array('type' => 'message', 'msg' => $result));
         }
