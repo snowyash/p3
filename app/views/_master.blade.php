@@ -14,7 +14,7 @@
 
     <!-- Bootstrap -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="mystyle.css">
+    <link rel="stylesheet" type="text/css" href="/mystyle.css">
 
 </head>
 
@@ -47,7 +47,7 @@
 
     @yield('content')
 
-    <script src="myscripts.js"></script>
+    <script src="/myscripts.js"></script>
     
 </body>
 </html>

@@ -11,17 +11,27 @@
 |
 */
 
+Route::get('/', function()
+{
+	return View::make('welcome');
+});
+
 Route::get('/xkcd', function()
 {
 	return View::make('xkcd');
-});
-
-Route::get('/lorem_ipsum', function()
-{
-	return View::make('lorem_ipsum');
 });
 
 Route::get('/fake_user', function()
 {
 	return View::make('fake_user');
 });
+
+Route::get('/lorem_ipsum', array(
+    'as' => 'LIController.new',
+    'uses' => 'LIController@add'
+) );
+ 
+Route::post('/lorem_ipsum', array(
+    'as' => 'LIController.create',
+    'uses' => 'LIController@create'
+) );

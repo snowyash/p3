@@ -1,11 +1,11 @@
 @extends('_master')
 
 @section('title')
-	Developer's best friend: Lorem Ipsum generator
+  Developer's best friend: Lorem Ipsum generator
 @stop
 
 @section('content')
-	<!-- Main jumbotron for a primary marketing message or call to action -->
+  <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
       <div class="container">
         <h1>Lorem Ipsum generator</h1>
@@ -14,33 +14,44 @@
     </div>
 
     <div class="container">
-      <form role="form" method="GET">
+      {{ Form::open( array(
+          'route' => 'LIController.create',
+          'method' => 'post',
+          'id' => 'form-add-lorem_ipsum',
+          'role' => 'form',
+          ) ) }}
+      
+      <div class="col-lg-10 col-lg-offset-1">
+          <h3 class="text-justify" id="lorem_ipsum"></h3>          
+      </div>
 
-        <div class="form-group col-lg-12">
-          <label for="parCount">How many paragraphs do you want to use:</label>
-          <select class="form-control" id="parCount" name="parCount">
-            <option value="1">1 paragraph</option>
-            <option value="2">2 paragraphs</option>
-            <option value="3">3 paragraphs</option>
-            <option value="4">4 paragraphs</option>
-            <option value="5">5 paragraphs</option>
-          </select>          
-        </div>
+      <div class="form-group col-lg-12">
+        {{ Form::label( 'parCount', 'How many paragraphs do you want to use:' ) }}
+        {{ Form::select('parCount', 
+        [
+           '1' => '1 paragraph',
+           '2' => '2 paragraphs',
+           '3' => '3 paragraphs',
+           '4' => '4 paragraphs',
+           '5' => '5 paragraphs',
+        ], null, 
+          array(
+            'id' => 'parCount',
+            'placeholder' => 'Enter Paragraph Count',
+            'maxlength' => 20,
+            'required' => true,
+            'class' => 'form-control',
+          )
+        ) }}
 
-        <div class="form-group">
-          <button type="submit" class="btn btn-primary col-lg-4 col-lg-offset-4" id="submitBtn">Submit</button>
-        </div>
+        {{ Form::submit( 'Submit', array(
+            'id' => 'submitBtn_lorem_ipsum',
+            'class' => 'col-lg-4 col-lg-offset-4',
+        ) ) }}
+      </div>
+                     
+      {{ Form::close() }}
 
-        <div class="col-lg-10 col-lg-offset-1">
-		    <h3 class="text-justify" id="password">
-		       	<?php
-		        	$generator = new Badcow\LoremIpsum\Generator();
-					$paragraphs = $generator->getParagraphs(1);
-					echo implode('<p>', $paragraphs);
-		        ?>
-		    </h3>
-  		</div>
-    </form>
-
-    </div> 
+    </div>
+    
 @stop
