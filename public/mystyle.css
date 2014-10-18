@@ -1,9 +1,9 @@
-.checkbox, h2, button{
+h2, button{
   margin-bottom: 30px;
 }
 
 .other-color{
-  background-color: #000;
+  background-color: #abd;
 }
 
 .navbar-inverse .navbar-brand{

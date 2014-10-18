@@ -43,7 +43,8 @@
             'class' => 'form-control',
           )
         ) }}
-
+      </div>
+      <div class="form-group text-center">
         {{ Form::submit( 'Submit', array(
             'id' => 'submitBtn_lorem_ipsum',
             'class' => 'btn btn-primary col-lg-4 col-lg-offset-4',

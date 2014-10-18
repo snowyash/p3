@@ -44,7 +44,8 @@
               'class' => 'form-control',
             )
           ) }}  
-
+        </div>
+        <div class="form-group  text-center">
           {{ Form::submit( 'Submit', array(
               'id' => 'submitBtn_fake_user',
               'class' => 'btn btn-primary col-lg-4 col-lg-offset-4',

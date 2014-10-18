@@ -35,7 +35,7 @@
           <input type="text" class="form-control" id="maxLength" name="maxLength" placeholder="Example: 12, 16 or 20">
         </div>
 
-        <div class="checkbox col-lg-12">
+        <div class="col-lg-12">
           <label class="col-lg-2">
             <input type="checkbox" id="includeDigit" name="includeDigit">Include Digits (0-9)
           </label>
@@ -53,7 +53,7 @@
           </label>
         </div>
 
-        <div class="form-group">
+        <div class="form-group text-center">
           <button type="submit" class="btn btn-primary col-lg-4 col-lg-offset-4" id="submitBtn">Submit</button>
         </div>
       </form>
