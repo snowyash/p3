@@ -15,21 +15,21 @@
 
     <div class="container">
       <div class="col-lg-4 text-center">
-      	<a href="">XKCD Password Generator</a>
+      	<a href="/xkcd">XKCD Password Generator</a>
       	<div>
-      		<iframe src="http://p3.snowyash.me/xkcd" width = "95%" height = "500"></iframe>
+      		<iframe src="/xkcd" width = "95%" height = "500"></iframe>
       	</div>
       </div>
       <div class="col-lg-4 text-center">
-      	<a href="">Lorem Ipsum Generator</a>
+      	<a href="/lorem_ipsum">Lorem Ipsum Generator</a>
 		<div>
-      		<iframe src="http://p3.snowyash.me/lorem_ipsum" width = "95%" height = "500"></iframe>
+      		<iframe src="/lorem_ipsum" width = "95%" height = "500"></iframe>
       	</div>
       </div>
       <div class="col-lg-4 text-center">
-      	<a href="">Fake User Generator</a>
+      	<a href="/fake_user">Fake User Generator</a>
       	<div>
-      		<iframe src="http://p3.snowyash.me/fake_user" width = "95%" height = "500"></iframe>
+      		<iframe src="/fake_user" width = "95%" height = "500"></iframe>
       	</div>
       </div>
     </div> 

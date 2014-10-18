@@ -22,7 +22,7 @@
           ) ) }}
       
       <div class="col-lg-10 col-lg-offset-1">
-        <h3 class="text-justify"  id="lorem_ipsum"></h3>
+        <h4 class="text-justify"  id="lorem_ipsum"></h4>
       </div>
 
       <div class="form-group col-lg-12">
@@ -46,7 +46,7 @@
 
         {{ Form::submit( 'Submit', array(
             'id' => 'submitBtn_lorem_ipsum',
-            'class' => 'col-lg-4 col-lg-offset-4',
+            'class' => 'btn btn-primary col-lg-4 col-lg-offset-4',
         ) ) }}
       </div>
                      

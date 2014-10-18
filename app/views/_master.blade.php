@@ -31,7 +31,7 @@
             <span class="icon-bar"></span>
             </button>
 
-            <div class="navbar-brand"><a href="">P3 by Claire Yixie Li</a></div>
+            <div class="navbar-brand"><a href="/">P3 by Claire Yixie Li</a></div>
         </div>
 
         <div class="navbar-collapse collapse">

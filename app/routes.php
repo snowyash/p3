@@ -21,11 +21,6 @@ Route::get('/xkcd', function()
 	return View::make('xkcd');
 });
 
-Route::get('/fake_user', function()
-{
-	return View::make('fake_user');
-});
-
 Route::get('/lorem_ipsum', array(
     'as' => 'LIController.new',
     'uses' => 'LIController@add'
@@ -34,4 +29,14 @@ Route::get('/lorem_ipsum', array(
 Route::post('/lorem_ipsum', array(
     'as' => 'LIController.create',
     'uses' => 'LIController@create'
+) );
+
+Route::get('/fake_user', array(
+    'as' => 'FUController.new',
+    'uses' => 'FUController@add'
+) );
+ 
+Route::post('/fake_user', array(
+    'as' => 'FUController.create',
+    'uses' => 'FUController@create'
 ) );

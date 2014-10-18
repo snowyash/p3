@@ -83,3 +83,28 @@ jQuery( document ).ready( function( $ ) {
     } );
  
 } );
+
+jQuery( document ).ready( function( $ ) {
+ 
+    $( '#form-add-fake_user' ).on( 'submit', function() {
+ 
+        $.post(
+            $( this ).prop( 'action' ),
+            {
+                "_token": $( this ).find( 'input[name=_token]' ).val(),
+                "userCount": $( '#userCount' ).val()
+            },
+            function( data ) {
+                console.log(data);
+                var result = data.msg;
+
+                $("#fake_user").html(result);
+            },
+            'json'
+        );
+ 
+        //prevent the form from actually submitting in browser
+        return false;
+    } );
+ 
+} );

@@ -14,35 +14,43 @@
     </div>
 
     <div class="container">
-      <form role="form" method="GET">
+      {{ Form::open( array(
+          'route' => 'FUController.create',
+          'method' => 'post',
+          'id' => 'form-add-fake_user',
+          'role' => 'form',
+          ) ) }}
+
+      <div class="col-lg-10 col-lg-offset-1">
+        <h4 class="text-left" id="fake_user">
+        </h4>
+      </div>
 
         <div class="form-group col-lg-12">
-          <label for="userCount">How many fake users do you want to use:</label>
-          <select class="form-control" id="userCount" name="userCount">
-            <option value="1">1 user</option>
-            <option value="2">2 users</option>
-            <option value="3">3 users</option>
-            <option value="4">4 users</option>
-            <option value="5">5 users</option>
-          </select>          
-        </div>
+          {{ Form::label( 'userCount', 'How many users do you want to create:' ) }}
+          {{ Form::select('userCount', 
+          [
+             '1' => '1 User',
+             '2' => '2 Users',
+             '3' => '3 Users',
+             '4' => '4 Users',
+             '5' => '5 Users',
+          ], null, 
+            array(
+              'id' => 'userCount',
+              'placeholder' => 'Enter User Count',
+              'maxlength' => 20,
+              'required' => true,
+              'class' => 'form-control',
+            )
+          ) }}  
 
-        <div class="form-group">
-          <button type="submit" class="btn btn-primary col-lg-4 col-lg-offset-4" id="submitBtn">Submit</button>
+          {{ Form::submit( 'Submit', array(
+              'id' => 'submitBtn_fake_user',
+              'class' => 'btn btn-primary col-lg-4 col-lg-offset-4',
+          ) ) }}      
         </div>
-
-        <div class="col-lg-10 col-lg-offset-1">
-		    <h3 class="text-justify" id="password">
-		       	<?php
-		       		for($i = 0; $i < 5; $i++){
-			        	$faker = Faker\Factory::create();
-			        	echo ($i+1).') '.$faker->name.'<br />';
-			        	echo $faker->address.'<br />';
-			        	echo $faker->text.'<br />'.'<br />';
-		        	}
-		        ?>
-		    </h3>
-  		</div>
+	
     </form>
 
     </div> 
