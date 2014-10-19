@@ -4,6 +4,33 @@
 	Developer's best friend: Fake user generator
 @stop
 
+@section('navbar')
+  <div class="navbar navbar-inverse navbar-fixed-top other-color" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+
+            <div class="navbar-brand"><a href="/fake_user">Fake user generator</a></div>
+        </div>
+
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="/">Welcome Page</a></li>
+            <li><a href="/xkcd">xkcd password generator</a></li>
+            <li><a href="/lorem_ipsum">Lorem Ipsum generator</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+@stop
+
 @section('content')
 	<!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
@@ -21,9 +48,7 @@
           'role' => 'form',
           ) ) }}
 
-      <div class="col-lg-10 col-lg-offset-1">
-        <h4 class="text-left" id="fake_user">
-        </h4>
+      <div class="col-lg-12" id="fake_user">
       </div>
 
         <div class="form-group col-lg-12">
@@ -35,6 +60,7 @@
              '3' => '3 Users',
              '4' => '4 Users',
              '5' => '5 Users',
+             '6' => '6 Users',
           ], null, 
             array(
               'id' => 'userCount',

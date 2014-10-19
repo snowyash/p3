@@ -4,6 +4,33 @@
 	Developer's best friend: xkcd password generator
 @stop
 
+@section('navbar')
+  <div class="navbar navbar-inverse navbar-fixed-top other-color" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+
+            <div class="navbar-brand"><a href="/xkcd">xkcd password generator</a></div>
+        </div>
+
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="/">Welcome Page</a></li>
+            <li><a href="/lorem_ipsum">Lorem Ipsum generator</a></li>
+            <li><a href="/fake_user">Fake user generator</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+@stop
+
 @section('content')
 	<!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
@@ -37,10 +64,10 @@
 
         <div class="col-lg-12">
           <label class="col-lg-2">
-            <input type="checkbox" id="includeDigit" name="includeDigit">Include Digits (0-9)
+            <input type="checkbox" id="includeDigit" name="includeDigit"> Include Digits (0-9)
           </label>
           <label class="col-lg-4">
-            <input type="checkbox" id="includeSymbol" name="includeSymbol">Include Symbols (&#36;&#45;&#64;&#95;&#38;)
+            <input type="checkbox" id="includeSymbol" name="includeSymbol"> Include Symbols (&#36;&#45;&#64;&#95;&#38;)
           </label>
           <label class="col-lg-2">
             <input type="radio" id="capitalization" name="capitalization"> Capitalize 1st Letters

@@ -95,10 +95,25 @@ jQuery( document ).ready( function( $ ) {
                 "userCount": $( '#userCount' ).val()
             },
             function( data ) {
-                console.log(data);
-                var result = data.msg;
+                //first remove existing users, if any
+                $(".users").remove();
 
-                $("#fake_user").html(result);
+                //test data is ok
+                console.log(data.msg[0].name);
+
+                //loop to create users in boxes
+                for(i = 0; i < $( '#userCount' ).val(); i++){
+                  $("#fake_user").append(
+                  "<div class='users col-lg-3 col-lg-offset-1'>"+
+                    "<h4>"+data.msg[i].name+"</h4>"+
+                    "<p>Birthday: "+data.msg[i].bday+"</p>"+
+                    "<p>Company: "+data.msg[i].company+"</p>"+
+                    "<p>Address: "+data.msg[i].address+"</p>"+
+                    "<p>Description: "+data.msg[i].description+"</p>"+
+                  "</div>"
+                  );
+                }
+                
             },
             'json'
         );

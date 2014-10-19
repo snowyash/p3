@@ -21,12 +21,18 @@
             }
             $userCount = Input::get( 'userCount' );
 
-            $users = "";
+            $users = array();
+
             for($i = 0; $i < $userCount; $i++){
+                $users[$i] = array();
+
                 $faker = Faker\Factory::create();
-                $users .= ($i+1).') Name: '.$faker->name.'<br />';
-                $users .= 'Address: '.$faker->address.'<br />';
-                $users .= 'Description: '.$faker->text.'<br />'.'<br />';
+
+                $users[$i]['name'] = $faker->name.'<br />';
+                $users[$i]['bday'] = $faker->dateTimeThisCentury->format('Y-m-d').'<br />';
+                $users[$i]['company'] = $faker->company.'<br />';
+                $users[$i]['address'] = $faker->address.'<br />';
+                $users[$i]['description'] = $faker->text.'<br />'.'<br />';
             }
      
             return Response::json(array('type' => 'message', 'msg' => $users));

@@ -4,6 +4,33 @@
   Developer's best friend: Lorem Ipsum generator
 @stop
 
+@section('navbar')
+  <div class="navbar navbar-inverse navbar-fixed-top other-color" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+
+            <div class="navbar-brand"><a href="/lorem_ipsum">Lorem Ipsum generator</a></div>
+        </div>
+
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="/">Welcome Page</a></li>
+            <li><a href="/xkcd">xkcd password generator</a></li>
+            <li><a href="/fake_user">Fake user generator</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+@stop
+
 @section('content')
   <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
@@ -22,7 +49,7 @@
           ) ) }}
       
       <div class="col-lg-10 col-lg-offset-1">
-        <h4 class="text-justify"  id="lorem_ipsum"></h4>
+        <p class="text-justify"  id="lorem_ipsum"></p>
       </div>
 
       <div class="form-group col-lg-12">
@@ -34,6 +61,7 @@
            '3' => '3 paragraphs',
            '4' => '4 paragraphs',
            '5' => '5 paragraphs',
+           '6' => '6 paragraphs',
         ], null, 
           array(
             'id' => 'parCount',
