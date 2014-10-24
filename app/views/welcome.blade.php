@@ -42,15 +42,15 @@
 
     <div class="container">
       <div class="col-lg-4 text-center">
-      		<iframe src="/xkcd" width = "95%" height = "500"></iframe>
+      		<iframe src="/xkcd" width = "100%" height = "500"></iframe>
       </div>
       
       <div class="col-lg-4 text-center">
-      		<iframe src="/lorem_ipsum" width = "95%" height = "500"></iframe>
+      		<iframe src="/lorem_ipsum" width = "100%" height = "500"></iframe>
       </div>
 
       <div class="col-lg-4 text-center">
-      		<iframe src="/fake_user" width = "95%" height = "500"></iframe>
+      		<iframe src="/fake_user" width = "100%" height = "500"></iframe>
       </div>
     </div> 
 @stop

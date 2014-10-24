@@ -32,7 +32,7 @@
                 $users[$i]['bday'] = $faker->dateTimeThisCentury->format('Y-m-d').'<br />';
                 $users[$i]['company'] = $faker->company.'<br />';
                 $users[$i]['address'] = $faker->address.'<br />';
-                $users[$i]['description'] = $faker->text.'<br />'.'<br />';
+                $users[$i]['description'] = $faker->text(150).'<br />'.'<br />';
             }
      
             return Response::json(array('type' => 'message', 'msg' => $users));
