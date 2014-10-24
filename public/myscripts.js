@@ -60,66 +60,76 @@ $("#submitBtn").click(function(){
   return false;
 })
 
-jQuery( document ).ready( function( $ ) {
+jQuery(document).ready(function($){
  
-    $( '#form-add-lorem_ipsum' ).on( 'submit', function() {
- 
-        $.post(
-            $( this ).prop( 'action' ),
-            {
-                "_token": $( this ).find( 'input[name=_token]' ).val(),
-                "parCount": $( '#parCount' ).val()
-            },
-            function( data ) {
-                var result = data.msg;
-
-                $("#lorem_ipsum").html(result);
-            },
-            'json'
-        );
- 
-        //prevent the form from actually submitting in browser
-        return false;
-    } );
- 
-} );
-
-jQuery( document ).ready( function( $ ) {
- 
-    $( '#form-add-fake_user' ).on( 'submit', function() {
+    $('#form-add-lorem_ipsum').on('submit', function(){
  
         $.post(
-            $( this ).prop( 'action' ),
+            //submit token and parCount to LIController
+            $(this).prop('action'),
             {
-                "_token": $( this ).find( 'input[name=_token]' ).val(),
-                "userCount": $( '#userCount' ).val()
+                "_token": $(this).find('input[name=_token]').val(),
+                "parCount": $('#parCount').val()
             },
-            function( data ) {
-                //first remove existing users, if any
-                $(".users").remove();
+            //take returned data, and return the msg
+            function(data){
 
-                //test data is ok
-                console.log(data.msg[0].name);
+                if(data.type != 'error'){
+                  var result = data.msg;
 
-                //loop to create users in boxes
-                for(i = 0; i < $( '#userCount' ).val(); i++){
-                  $("#fake_user").append(
-                  "<div class='users col-lg-3 col-lg-offset-1'>"+
-                    "<h4>"+data.msg[i].name+"</h4>"+
-                    "<p>Birthday: "+data.msg[i].bday+"</p>"+
-                    "<p>Company: "+data.msg[i].company+"</p>"+
-                    "<p>Address: "+data.msg[i].address+"</p>"+
-                    "<p>Description: "+data.msg[i].description+"</p>"+
-                  "</div>"
-                  );
+                  $("#lorem_ipsum").html(result);
                 }
-                
+                else {
+                  // return error message
+                  $("#lorem_ipsum").html(data.msg);
+                }
             },
             'json'
         );
  
-        //prevent the form from actually submitting in browser
         return false;
-    } );
+    });
+
+    $('#form-add-fake_user').on('submit', function(){
+ 
+        $.post(
+            //submit token and userCount to FUController
+            $(this).prop('action'),
+            {
+                "_token": $(this).find('input[name=_token]').val(),
+                "userCount": $('#userCount').val()
+            },
+            //take returned data, and return the msg
+            function(data){
+                if(data.type != 'error'){
+                  //first remove existing users, if any
+                  $(".users").remove();
+
+                  //test data is ok
+                  console.log(data.msg[0].name);
+
+                  //loop to create users in divs
+                  for(i = 0; i < $('#userCount').val(); i++){
+                    $("#fake_user").append(
+                    "<div class='users col-lg-3 col-lg-offset-1'>"+
+                      "<h4>"+data.msg[i].name+"</h4>"+
+                      "<p>Birthday: "+data.msg[i].bday+"</p>"+
+                      "<p>Company: "+data.msg[i].company+"</p>"+
+                      "<p>Address: "+data.msg[i].address+"</p>"+
+                      "<p>Description: "+data.msg[i].description+"</p>"+
+                    "</div>"
+                    );
+                  }
+                }
+                else {
+                  // return error message
+                  $("#fake_user").html(data.msg);
+                }
+            },
+            'json'
+        );
+ 
+        return false;
+    });
  
 } );

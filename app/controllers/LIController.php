@@ -16,6 +16,7 @@
             //check if its our form
             if ( Session::token() !== Input::get( '_token' ) ) {
                 return Response::json( array(
+                    'type' => 'error',
                     'msg' => 'Unauthorized attempt to create setting'
                 ) );
             }
