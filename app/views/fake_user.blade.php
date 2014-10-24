@@ -64,8 +64,6 @@
           ], '1', 
             array(
               'id' => 'userCount',
-              'placeholder' => 'Enter User Count',
-              'maxlength' => 20,
               'class' => 'form-control',
             )
           ) }}  

@@ -65,8 +65,6 @@
         ], '1', 
           array(
             'id' => 'parCount',
-            'placeholder' => 'Enter Paragraph Count',
-            'maxlength' => 20,
             'class' => 'form-control',
           )
         ) }}
