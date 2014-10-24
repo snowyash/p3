@@ -66,7 +66,6 @@
               'id' => 'userCount',
               'placeholder' => 'Enter User Count',
               'maxlength' => 20,
-              'required' => true,
               'class' => 'form-control',
             )
           ) }}  

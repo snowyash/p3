@@ -67,7 +67,6 @@
             'id' => 'parCount',
             'placeholder' => 'Enter Paragraph Count',
             'maxlength' => 20,
-            'required' => true,
             'class' => 'form-control',
           )
         ) }}
