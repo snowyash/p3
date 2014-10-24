@@ -61,7 +61,7 @@
              '4' => '4 Users',
              '5' => '5 Users',
              '6' => '6 Users',
-          ], null, 
+          ], '1', 
             array(
               'id' => 'userCount',
               'placeholder' => 'Enter User Count',

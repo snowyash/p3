@@ -16,6 +16,8 @@ h2, button{
 
 iframe{
 	border: 1px solid black;
+	height: 500px;
+	width: 100%;
 }
 
 .users{

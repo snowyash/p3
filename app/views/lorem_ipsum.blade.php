@@ -62,7 +62,7 @@
            '4' => '4 paragraphs',
            '5' => '5 paragraphs',
            '6' => '6 paragraphs',
-        ], null, 
+        ], '1', 
           array(
             'id' => 'parCount',
             'placeholder' => 'Enter Paragraph Count',

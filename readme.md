@@ -15,7 +15,7 @@ This project uses Laravel and Laravel packagist such as paste/pre, badcow/lorem-
 Demo will be presented in a live section.
 
 ##Details for the teaching team
-Validation error passed. Site speed is 1.61s according to <http://tools.pingdom.com/> No login or password required.
+Validation error passed. Site speed is 654ms according to <http://tools.pingdom.com/> No login or password required.
 
 ##Outside Code
 * Twitter Bootstrap: <http://http://getbootstrap.com/2.3.2/>
