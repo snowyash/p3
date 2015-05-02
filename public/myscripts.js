@@ -1,17 +1,17 @@
 $( "#upperCase" ).click(function(){
     $( '#lowerCase' ).attr( 'checked', false );
     $( '#capitalization' ).attr( 'checked', false );
-} )
+})
 
 $( "#lowerCase" ).click(function(){
     $( '#upperCase' ).attr( 'checked', false );
     $( '#capitalization' ).attr( 'checked', false );
-} )
+})
 
 $( "#capitalization" ).click(function(){
     $( '#upperCase' ).attr( 'checked', false );
     $( '#lowerCase' ).attr( 'checked', false );
-} )
+})
 
 $( "#submitBtn" ).click(function(){
     var proceed = true;
@@ -60,7 +60,7 @@ $( "#submitBtn" ).click(function(){
         }, 'json' );
     }
     return false;
-} )
+})
 
 jQuery( document ).ready(function( $ ){
  
@@ -91,7 +91,7 @@ jQuery( document ).ready(function( $ ){
         );
  
         return false;
-    } );
+    });
 
     $( '#form-add-fake_user' ).on( 'submit', function(){
  
@@ -132,6 +132,6 @@ jQuery( document ).ready(function( $ ){
             },'json' );
  
         return false;
-    } );
+    });
 
-} );
+});
