@@ -1,26 +1,26 @@
-h2, button{
+h2, button {
   margin-bottom: 30px;
 }
 
-.other-color{
+.other-color {
   background-color: #abd;
 }
 
-.navbar-inverse .navbar-brand{
+.navbar-inverse .navbar-brand {
   color: #F6CEE3;
 }
 
-#password{
+#password {
   color: #5cb85c;
 }
 
-iframe{
+iframe {
 	border: 1px solid black;
 	height: 500px;
 	width: 100%;
 }
 
-.users{
+.users {
 	border: 1px solid #ccc;
 	margin-bottom: 25px;
 	border-radius: 15px;

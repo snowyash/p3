@@ -11,32 +11,32 @@
 |
 */
 
-Route::get('/', function()
+Route::get( '/', function()
 {
-	return View::make('welcome');
+	return View::make( 'welcome' );
 });
 
-Route::get('/xkcd', function()
+Route::get( '/xkcd', function()
 {
-	return View::make('xkcd');
+	return View::make( 'xkcd' );
 });
 
-Route::get('/lorem_ipsum', array(
-    'as' => 'LIController.new',
-    'uses' => 'LIController@add'
+Route::get( '/lorem_ipsum', array(
+    'as'    => 'LIController.new',
+    'uses'  => 'LIController@add'
 ) );
  
-Route::post('/lorem_ipsum', array(
-    'as' => 'LIController.create',
-    'uses' => 'LIController@create'
+Route::post( '/lorem_ipsum', array(
+    'as'    => 'LIController.create',
+    'uses'  => 'LIController@create'
 ) );
 
-Route::get('/fake_user', array(
-    'as' => 'FUController.new',
-    'uses' => 'FUController@add'
+Route::get( '/fake_user', array(
+    'as'    => 'FUController.new',
+    'uses'  => 'FUController@add'
 ) );
  
-Route::post('/fake_user', array(
-    'as' => 'FUController.create',
+Route::post( '/fake_user', array(
+    'as'    => 'FUController.create',
     'uses' => 'FUController@create'
 ) );

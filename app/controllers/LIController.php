@@ -16,17 +16,17 @@
             //check if its our form
             if ( Session::token() !== Input::get( '_token' ) ) {
                 return Response::json( array(
-                    'type' => 'error',
-                    'msg' => 'Unauthorized attempt to create setting'
+                    'type'  => 'error',
+                    'msg'   => 'Unauthorized attempt to create setting'
                 ) );
             }
-            $parCount = Input::get( 'parCount' );
+            $parCount   = Input::get( 'parCount' );
 
-            $generator = new Badcow\LoremIpsum\Generator();
-            $paragraphs = $generator->getParagraphs($parCount);
-            $result = implode('<p><p>', $paragraphs);
+            $generator  = new Badcow\LoremIpsum\Generator();
+            $paragraphs = $generator->getParagraphs( $parCount );
+            $result     = implode( '<p><p>', $paragraphs );
      
-            return Response::json(array('type' => 'message', 'msg' => $result));
+            return Response::json(array( 'type' => 'message', 'msg' => $result ));
         }
      
     //end of class
